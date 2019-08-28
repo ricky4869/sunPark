@@ -1,0 +1,22 @@
+中央處理器：Intel Xeon Silver 4110 8C 2.1GHz/2400MHz/11MB (85W)
+處理器數量(標準/最大)：1
+晶片組：Intel C622
+作業系統：選購
+記憶體：1*16GB TruDDR4 2666MHz ECC RDIMM
+記憶體插槽數量/己佔用數量：最大12組/己佔用1組(每顆CPU支援6組DIMM)
+硬碟機：選購(2.5" SAS/SATA)硬碟
+硬碟機數量(標準/最大)：標準0組(選購)/最大16組(第9-16組須選購7XH7A06254及第二組Raid Controller)
+光碟機：選購(外接式光碟機)
+硬碟控制介面：內建 Raid 930-8i，支援Raid-0/1/5/50/6/60
+顯示介面：Matrox G200 16MB，Max 1920x1200 at 60Hz
+輸出入介面：Front:USB 3.0*1/USB 2.0*1(XCC)/VGA*1(選購)
+輸出入介面：Rear:USB 3.0 *2/VGA(DB-15)*1/Serial Port*1(DB-9/選購)
+網路介面：2*1 GbE RJ-45(不支援 10/100 Mb); 1*10/100/1000 Mb管理埠
+擴充槽數量：標準 4*PCIe 3.0(slot4在主板上); 第5/6組 PCIe須選購Riser-2及第二組CPU
+尺寸：H: 87mm; W: 445mm; D: 720mm
+電源供應器：標準750W*1 Platinum Hot-Swap Power Supply, 可選購第二組Redundant Power
+機構型式：2U Rack-Mount(機架式)
+管理軟體：原廠安裝及設定輔助軟體及與主機同廠牌之系統管理軟體(須自網站下載)
+輸入裝置：選購(USB only)
+保固期限：三年 5*8 NBD零件交換或到場保固(保固條件以Lenovo公告為準)
+安規：通過FCC Class A、UL及台灣EMC等安規

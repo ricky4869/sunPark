@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" id="myPage">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+		integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+
+<body>
+	<div id="wrap">
+
+		<div class="mb-header">
+			<nav class="navbar mb-navbar">
+				<div class="container-fluid mb-container">
+					<button class="menu-btn">
+						<span class="fas fa-bars"></span>
+					</button>
+					<ul class="mb-menu menu">
+
+					</ul>
+
+					<ul class="nav header-navbar">
+						<li class="nav-item"><a href="index.html" class="nav-link"><span class="fas fa-home"></span></a>
+						</li>
+						<li class="nav-item"><a href="#" class="nav-link"><span class="fas fa-envelope"></span></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="header">
+			<nav class="navbar logo-navbar">
+				<div class="container">
+					<div class="navbar-brand">
+						<a href="index.html" class="logo-text">
+							<img src="img/img2.jpg" alt="">
+							<h2>聖凡資訊有限公司<p>SUNPARK INFORMATION CO. LTD</p>
+							</h2>
+						</a>
+					</div>
+
+					<ul class="nav header-navbar md-none">
+						<li class="nav-item"><a href="index.html" class="nav-link"><span class="fas fa-home"></span></a>
+						</li>
+						<li class="nav-item"><a href="#" class="nav-link"><span class="fas fa-envelope"></span></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="navbar main-navbar">
+			<!-- <div class="container"> -->
+			<ul class="menu nav-menu">
+
+			</ul>
+			<!-- </div> -->
+		</div>
+
+		<div class="wrap">
+
+			<div class="container">
+
+				<div class="addMember_bar row">
+
+					<div class="addMember col-sm-10 col-md-8 col-12">
+						<h3>新增/修改會員</h3>
+						<ul>
+							<li>
+								<div class="mem_item">
+									姓名<span class="imp_red">*</span>
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_name">
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									E-mail<span class="imp_red">*</span>
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_email" onblur=iEmail(this.value)><span
+										class="alertemail imp_red d-block" style="font-size:.9em;"></span>
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									密碼<span class="imp_red">*</span>
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_password" onblur='checkPassword()'>
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									確認密碼<span class="imp_red">*</span>
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_checkPassword" onblur='checkPassword()'><span
+										class="alertPassword imp_red d-block" style="font-size:.9em;"></span>
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									出生日期
+								</div>
+								<div class="mem_input">
+									<input class="mem_birthday" data-toggle="datepicker" placeholder="如:1990/01/01"
+										readonly="readonly">
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									性別
+								</div>
+								<div class="mem_input">
+									<select class="gender mem_sex" style="width: 60px">
+										<option value="MAN">男</option>
+										<option value="WOMAN">女</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									聯絡電話
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_area"
+										onkeyup="this.value=this.value.replace(/\D/g,'')">-<input type="text"
+										class="mem_call" onkeyup="this.value=this.value.replace(/\D/g,'')">
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									手機<span class="imp_red">*</span>
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_phone"
+										onkeyup="this.value=this.value.replace(/\D/g,'')">
+								</div>
+							</li>
+							<li>
+								<div class="mem_item">
+									地址
+								</div>
+								<div class="mem_input">
+									<input type="text" class="mem_address">
+								</div>
+							</li>
+							<li>
+								<div class="btn">
+									<a href="#">註冊會員</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="goTop">
+				<a href="#myPage">
+					<div class="goTop-label">
+						<span class="fa-stack">
+							<span class="fas fa-circle fa-stack-2x" style="color: #1B3191;"></span>
+							<span class="fas fas fa-angle-double-up fa-stack-1x" style="color:#fff;"></span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="sign modal fade">
+				<div class="modal-dialog modal-dialog-centered justify-content-center">
+					<div class="signBar">
+						<span class="close fas fa-times" data-dismiss="modal"></span>
+						<h4>會員登入</h4>
+						<ul>
+							<li>
+								<span>電子信箱</span>
+								<input type="text" placeholder="請輸入您的電子信箱">
+							</li>
+							<li>
+								<span>密碼</span>
+								<input type="text" placeholder="請輸入您的密碼">
+							</li>
+							<li>
+								<span>請輸入右圖字樣：</span><span><img id="imgcode" src="captcha.php"
+										onclick="refresh_code()" />
+								</span>
+							</li>
+							<li>
+								<div class="signIn signBtn"><a href="#">
+										登入會員
+									</a></div>
+							</li>
+							<li>
+								<a href="#">忘記密碼?</a>
+							</li>
+							<li>
+								<div class="signUp signBtn"><a href="registered.html">
+										註冊會員
+									</a></div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+		<div class="footer-navbar navbar">
+			<div class="container">
+				<ul class="navbar-list">
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">公司簡介</a></li>
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">技術產品</a></li>
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">管理軟體</a></li>
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">成功案例</a></li>
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">線上促銷</a></li>
+					<li class="nav-item"><a class="nav-link font-weight-bolder" href="#">線上報修</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="footer-text container">
+				<p>聖凡資訊有限公司 台南市北區南園街105巷56號 電話:06-2083008 FAX:06-2370862 <br>E-mail:service@sunpark.com.tw
+					服務時間：週一到週五 8:30～18:00</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/datepicker.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/all.js"></script>
+	<script src="js/navbar.js"></script>
+	<!-- bs4 -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
+	<script>
+
+		function checkPassword() {
+			var password = document.querySelector('.mem_password');
+			var checkPasswords = document.querySelector('.mem_checkPassword');
+			var alertPassword = document.querySelector('.alertPassword');
+			if (password.value !== checkPasswords.value) {
+				alertPassword.innerHTML = '與密碼不一致';
+			} else {
+				alertPassword.innerHTML = '';
+			}
+		};
+
+		function iEmail(strEmail) {
+			let alertEmail = document.querySelector('.alertemail');
+			if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) {
+				alertEmail.innerHTML = '';
+			} else {
+				alertEmail.innerHTML = 'E-mail格式不符';
+			}
+		};
+
+
+		$(document).ready(function () {
+			$('[data-toggle="datepicker"]').datepicker({
+				language: 'zh-TW',
+				format: 'yyyy/mm/dd',
+				autoHide: true
+
+			});
+		})
+
+
+	</script>
+
+
+
+
+</body>
+
+</html>
